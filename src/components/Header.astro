@@ -1,0 +1,47 @@
+---
+
+import { Navbar } from 'astro-bootstrap';
+import type { NavbarItemType } from 'astro-bootstrap';
+// demonstration data
+const siteTitle = 'Límite motor'; // pull this in from a config file
+const items: NavbarItemType[] = [
+  // pull this in from a config file
+  { text: 'Inicio', href: '/' },
+  { text: 'Sobre nosotros', href: '/about' },
+  { text: 'Galeria', href: '/galeria' },
+  { text: 'Contacto', href: '/contacto' },
+  { text: 'Servicio', href: '/servicio' },
+  // {
+  //   text: 'Blog',
+  //   subItems: [
+  //     { text: 'Post', href: '#' },
+  //     { divider: true },
+  //     { text: 'Second child', href: '#' },
+  //   ],
+  // },
+];
+
+const id = 'navBarLimiteMotor';
+
+---
+
+<header> 
+
+  <Navbar class="navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">{siteTitle}</a>
+      <Navbar.Toggler controls={id} />
+      <Navbar.Collapse {id}>
+        <Navbar.Items {items} class="me-auto mb-2 mb-lg-0" />
+      </Navbar.Collapse>
+    </div>
+  </Navbar>
+
+</header>
+
+<style>
+    header {
+      font-size: 20px;
+    }
+</style>
+

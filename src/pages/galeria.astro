@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Carousel } from 'astro-bootstrap';
+import type { CarouselSlideType } from 'astro-bootstrap';
+
+
+const slides: CarouselSlideType[] = [
+    { img: '../src/assets/img/limiteMotorLogo.jpeg', alt:'Imagen del logo del taller' , active: true },
+    { img: '../src/assets/img/limiteMotorInterior.jpeg', alt: 'Imagen del interior del taller' },
+    { img: '../src/assets/img/limiteMotorInteriorDos.jpeg', alt: 'Imagen secundaria del interior del taller' },
+];
+
+const id = 'carouselImagenesTaller';
+
+---
+
+
+
+<Layout title="Galería de imágenes">
+    <h1 class="encabezado">Galería de imágenes del taller</h1>
+     <Carousel {id} fade>
+        <Carousel.Indicators {id} {slides} />
+        <Carousel.Inner>
+          {
+            slides.map((slide) => (
+              <Carousel.Item active={slide.active}>
+                <img
+                  src={slide.img}
+                  class="d-block w-100 img-fluid"
+                  alt={slide.alt}
+                />
+              </Carousel.Item>
+            ))
+          }
+        </Carousel.Inner>
+        <Carousel.Controls id={id} />
+      </Carousel>
+      
+
+    
+</Layout>
+
+<style>
+    .encabezado {
+        text-align: center;
+        padding: 50px;  
+        color: white;
+        font-size: 35px;
+    }
+</style>

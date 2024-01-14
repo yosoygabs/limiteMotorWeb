@@ -4,16 +4,31 @@ import { Image } from 'astro:assets';
 import imagenMecanico from '/src/assets/img/persona-dando-mantenimiento-a-su-moto-780x437.jpg';
 ---
 
-<Layout title="Página del servicio del taller">
+<Layout title="Servicio del taller">
     <h1>Servicio del taller</h1>
     <section class="contenedor">
         <div>
-            <Image src={imagenMecanico} alt="Imagen de mecánico"/>
+            <Image class="mecanico" src={imagenMecanico} alt="Imagen de mecánico"/>
         </div>    
         <div>
             <h2>Reparación y puesta a punto de motocicletas</h2><br>
-            <p>Este taller se emplea para la reparación y puesta a punto <span class="underlined">exclusivamente</span> de motocicletas. </p>
+            <p>
+                Con dedicación y experiencia, el servicio de reparación y puesta a punto que ofrece 
+                Carmelo como mecánico de <span class="underlined">motocicletas</span> es insuperable.
+            </p><br>
+            <p>
+                Su pasión por las motos se refleja 
+                en cada detalle de su trabajo, desde diagnosticar problemas mecánicos hasta realizar 
+                ajustes precisos para optimizar el rendimiento de cada moto.
+            </p><br>
         </div>
+        </div>
+        <div>
+            <h3>¿Quiénes conforman Límite motor?</h3>
+            <p class="intro-carmelo-nombre">Carmelo Cuerda</h2><br>
+            <p class="intro-carmelo">Soy Carmelo, actualmente trabajo como mecánico de motocicletas en el taller Límite motor, empecé en este taller en el 2001 hasta el día de hoy.</p>
+        </div>
+        
     </section>
     
 </Layout>
@@ -21,7 +36,11 @@ import imagenMecanico from '/src/assets/img/persona-dando-mantenimiento-a-su-mot
 <style>
     * {
         color: white;
-        line-height: 29px;
+        line-height: 35px;
+    }
+    body {
+        position: relative;
+        padding-bottom: 2.5em;
     }
     .underlined {
         text-decoration: underline;
@@ -29,7 +48,7 @@ import imagenMecanico from '/src/assets/img/persona-dando-mantenimiento-a-su-mot
     h1 {
         text-align: center;
         font-size: 35px;
-        margin-top: 10px;
+        margin-top: 60px;
     }
     h2 {
         margin-top:50px;
@@ -42,7 +61,8 @@ import imagenMecanico from '/src/assets/img/persona-dando-mantenimiento-a-su-mot
         font-size: 16px;
         
     }
-    img {
+    .mecanico {
+        border-top-left-radius: 20px;
         padding-top: 50px;
         width: 500px;
         border-radius: 20px;
@@ -50,5 +70,16 @@ import imagenMecanico from '/src/assets/img/persona-dando-mantenimiento-a-su-mot
     .contenedor {
         display: grid;
         grid-template-columns: 500px auto;
+    }
+    .conocenos {
+        margin-top: 40px;
+        font-size: 35px;
+        margin: 50px;
+    }
+    .intro-carmelo-nombre {
+        font-size: 25px;
+    }
+    .intro-carmelo {
+        font-size: 18px;
     }
 </style>

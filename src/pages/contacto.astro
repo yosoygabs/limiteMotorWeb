@@ -3,5 +3,62 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Página de contacto Límite motor">
-    <h1>¿Qué ofrecemos?</h1>
+    
+    <section class="contenedor">
+        <div class="ubicacion">
+            <h1>¿Donde está el taller?</h1>
+            <iframe class="visibility: hidden;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3126.9204402020605!2d-0.5319469243511944!3d38.39708857183516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd623400e05682a9%3A0x7dad9e4051232b9e!2sL%C3%ADmite%20Motor!5e0!3m2!1ses!2ses!4v1704968574476!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="horario">
+            <h3>Horario</h3>
+            
+            <p>Lunes, Miércoles y Viernes</p><p>Mañanas: 9:30h a 15:00h</p>
+            <br><hr><br>
+            <p>Martes y Jueves</p><p> Mañanas: 9:30h a 13:30h</p><p>Tardes: 15:30 a 18:00h</p>
+            <br><hr>
+            <h3>Teléfonos</h3>
+            <p>965 667 477</p>
+            <p>665 77 77 63</p>
+        </div>
+    </section>
+    
+    
 </Layout>
+
+<style>
+    @media (min-width:750px) {
+        .contenedor {
+            display: grid;
+            grid-template-columns: 800px 400px;
+            
+        }
+        
+    }
+    
+    .contenedor {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .ubicacion {
+        margin-left: 10px;
+    }
+    h3 {
+        padding-top: 35px;
+        padding-bottom: 20px;
+        font-size: 25px;    
+    }
+    div p {
+        line-height: 29px;
+    }
+    h1 {
+        margin-top: 25px;
+        font-size: 35px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+    
+    * {
+        color:white;
+    }
+    
+</style>

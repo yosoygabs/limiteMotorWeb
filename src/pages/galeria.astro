@@ -5,7 +5,8 @@ import type { CarouselSlideType } from 'astro-bootstrap';
 
 
 const slides: CarouselSlideType[] = [
-    { img: '../src/assets/img/limiteMotorLogo.jpeg', alt:'Imagen del logo del taller' , active: true },
+    { img: '../src/assets/img/honda.jpeg', alt:'Imagen del logo del taller' , active: true },
+    { img: '../src/assets/img/limiteMotorLogo.jpeg', alt:'Imagen del logo del taller'},
     { img: '../src/assets/img/limiteMotorInterior.jpeg', alt: 'Imagen del interior del taller' },
     { img: '../src/assets/img/limiteMotorInteriorDos.jpeg', alt: 'Imagen secundaria del interior del taller' },
 ];
@@ -41,10 +42,19 @@ const id = 'carouselImagenesTaller';
 </Layout>
 
 <style>
+    
     .encabezado {
         text-align: center;
         padding: 50px;  
         color: white;
         font-size: 35px;
     }
+    
+    
+    
+    /* body {
+        position: relative;
+        padding-bottom: 3em;
+        margin: 0;
+    } */
 </style>
